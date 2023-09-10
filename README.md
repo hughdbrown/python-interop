@@ -25,3 +25,18 @@ python3 fibonacci.py 25  0.05s user 0.02s system 11% cpu 0.574 total
 30: 832040
 python3 fibonacci.py 30  0.33s user 0.02s system 40% cpu 0.860 total
 ```
+
+2. Set up maturin
+```
+> pyenv virtualenv 3.11.4 interop-fib
+> pyenv activate interop-fib
+> echo maturin > requirements.txt
+> pip install -r requirements.txt
+```
+
+3. Add pyo3 to crate
+
+4. Initial build
+```
+> cargo build
+```
