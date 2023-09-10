@@ -46,3 +46,23 @@ python3 fibonacci.py 30  0.33s user 0.02s system 40% cpu 0.860 total
 - Add implementation for Rust function
 - Attach Rust function to module-exporting-stuff
 
+6. Replace python implementation with call to Rust
+
+6.5 Unexpected jiggery-pokery
+```
+mv ./fib/fib.cpython-311-darwin.so ./fib.so
+```
+
+7. Results
+```
+❯ time python3 fibonacci.py 25
+25: 75025
+python3 fibonacci.py 25  0.02s user 0.02s system 10% cpu 0.377 total
+❯ time python3 fibonacci.py 30
+30: 832040
+python3 fibonacci.py 30  0.02s user 0.02s system 15% cpu 0.268 total
+❯ time python3 fibonacci.py 35
+35: 9227465
+python3 fibonacci.py 35  0.04s user 0.02s system 20% cpu 0.277 total
+```
+

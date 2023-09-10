@@ -8,7 +8,7 @@ fn fib_fn(num: usize) -> usize {
 }
     
 #[pyfunction]
-fn fibonacci(num: usize) -> PyResult<usize> {
+pub fn fibonacci(num: usize) -> PyResult<usize> {
     Ok(fib_fn(num))
 }
 
@@ -16,7 +16,7 @@ fn fibonacci(num: usize) -> PyResult<usize> {
 /// the `lib.name` setting in the `Cargo.toml`, else Python will not be able to
 /// import the module.
 #[pymodule]
-fn fib(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
+pub fn fib(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(fibonacci, m)?)?;
     Ok(())
 }
