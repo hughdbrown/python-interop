@@ -40,3 +40,9 @@ python3 fibonacci.py 30  0.33s user 0.02s system 40% cpu 0.860 total
 ```
 > cargo build
 ```
+
+5. Initial Rust implementation
+- Add import for pyo3
+- Add implementation for Rust function
+- Attach Rust function to module-exporting-stuff
+
