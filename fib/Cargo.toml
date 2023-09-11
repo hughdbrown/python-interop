@@ -2,6 +2,10 @@
 name = "fib"
 version = "0.1.0"
 edition = "2021"
+authors = ["Hugh Brown <hughdbrown@gmail.com>"]
+description = "Project to demonstrate python-to-Rust interop using maturin and pyo3"
+keywords = ["python", "interop", "maturin", "pyo3"]
+include =["src/**/*", "requirements.txt", "fibonacci.py"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
